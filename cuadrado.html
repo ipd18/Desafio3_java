@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambio de color al presionar teclas</title>
+  <style>
+    .color1 {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .color2 {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    .color3 {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+
+    .color4 {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1" class="color1"></div>
+  <div id="div2" class="color2"></div>
+  <div id="div3" class="color3"></div>
+  <div id="div4" class="color4"></div>
+
+  <script>
+     let colorPresionado = "";
+
+document.addEventListener("keydown", function(event) {
+  const minus = event.key.toLowerCase();
+
+  if (minus === "a") {
+    colorPresionado = "purple";
+  } else if (minus === "s") {
+    colorPresionado = "orange";
+  } else if (minus === "d") {
+    colorPresionado = "pink";
+  }
+});
+
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+const div3 = document.getElementById("div3");
+const div4 = document.getElementById("div4");
+
+div1.addEventListener("click", function() {
+  div1.style.backgroundColor = colorPresionado;
+});
+
+div2.addEventListener("click", function() {
+  div2.style.backgroundColor = colorPresionado;
+});
+
+div3.addEventListener("click", function() {
+  div3.style.backgroundColor = colorPresionado;
+});
+
+div4.addEventListener("click", function() {
+  div4.style.backgroundColor = colorPresionado;
+});
+  </script>
+</body>
+</html>
